@@ -17,11 +17,9 @@ Docker コンテナによるLaTeX環境
     -v : ホストのパス(コマンドを起動したディレクトリ)をコンテナのパス(/workdir)にマウントする。
 - コンテナにログインしている状態なので、texファイルがあるディレクトリに移動してコンパイルする。
   コンパイルは目次を生成するため複数回実行する。
-  # uplatex kiyaku.tex
-  # uplatex kiyaku.tex
-  # uplatex kiyaku.tex
+  $ uplatex kiyaku.tex
 - コンパイルされたdviファイルをpdfファイルに変換する。
-  # dvipdfmx kiyaku.dvi
+  $ dvipdfmx kiyaku.dvi
 - これでkiyaku.pdfが作成される。
 
 Dockerfileから環境設定
