@@ -1,0 +1,7 @@
+*.log
+*.aux
+*.dvi
+*.toc
+*.zip
+.vscode
+.DS_Store
