@@ -3,7 +3,7 @@
 Docker コンテナによるLaTeX環境
 - Dockerイメージとして paperist/alpine-texlive-ja を利用する。
 - ダウンロード出来ない場合はDockerfileでbuildすればよい。（公開を感謝）
-- 目次を生成する場合、uplatex kiyaku.texを複数回実行する必要がある。
+- 目次を生成する場合、uplatex kiyaku.texを再起的に実行する必要がある。
   したがって、本来なら下記のコマンドでpdfファイルが作成されるが、目次が作成されない。
   $ docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja uplatex kiyaku.tex
   $ docker run --rm -v $PWD:/workdir paperist/alpine-texlive-ja dvipdfmx kiyaku.dvi
