@@ -3,13 +3,13 @@
 % IPAexフォント
 %
 
-% 日本語パッチのため冒頭で宣言するようだ。
+% 日本語パッチのため冒頭で宣言する。
 % https://qiita.com/wtsnjp/items/76557b1598445a1fc9da?utm_source=Qiitaニュース&utm_campaign=ab4bfefd0d-Qiita_newsletter_446_01_20_2021&utm_medium=email&utm_term=0_e44feaa081-ab4bfefd0d-33756457
 \RequirePackage{plautopatch}
 \RequirePackage[l2tabu, orthodox]{nag}
-
+% 日本語対応ドキュメントクラスを宣言（上記パッケージの後に読み込む）
 \documentclass[12pt,uplatex,dvipdfmx]{jsarticle}
-\和暦
+
 \usepackage[top=10truemm,bottom=15truemm,left=25truemm,right=20truemm]{geometry}
 \usepackage{calc}
 % 別表をpdfファイルとして取り込むために必要。
@@ -46,29 +46,8 @@
 % 日付を表示
 \date{令和4年4月1日}
 \maketitle
-% \clearpage
 \begin{center}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
-  \vspace{\baselineskip}
+  \vspace{100mm}
   \author{\Large ソフィア・ガーデンズ川崎 管理組合}
 \end{center}
 \vspace{\baselineskip}
@@ -907,7 +886,7 @@
 \item 住戸に設置された住宅情報機器については、以下の通り集中管理されること。
 \begin{enumerate}
       \item 各住戸より発報される情報（火災、非常通報、ガス漏れ）は管理事務室を経由し指定警備会社に送信されること。
-      \item 以上発生の場合、指定警備会社が一次対応し、二次対応は管理受託者が行うものとすること。
+      \item 異常発生の場合、指定警備会社が一次対応し、二次対応は管理受託者が行うものとすること。
       \item 前記(a)・(b)対応のため区分所有者は入居時に別に定めた事項を記載した緊急時連絡表（居住者名簿）を記入のうえ、管理組合に提出すること。
       \item 各住戸の住宅情報機器は一括集中管理されるため、取り外しはできないこと。
 \end{enumerate}
@@ -916,13 +895,10 @@
 \end{enumerate}
 ３．行政指導等について
 \begin{enumerate}
-\item 建築基準法の規定により12階以上の住戸の開放廊下に面するサッシの外側に甲種防火シャッターが設置され、また、11階以上の住戸の壁。天井の
-      クロスは準不燃クロスとなること。
+\item 建築基準法の規定により12階以上の住戸の開放廊下に面するサッシの外側に甲種防火シャッターが設置され、また、11階以上の住戸の壁。天井の クロスは準不燃クロスとなること。
 \item 11階以上の住戸の区分所有者（または占有者）は、消防法第８条の３に基づき同法政令で定める基準以上の防炎性能を有するカーテン等を使用すること。
 \item 建築基準法および消防法の規定により延焼のおそれのある部分に含まれる窓ガラスは、網入りガラス仕様となること。なお、当該部分については、
       将来ともこの形状を維持すること。
-\item 建築基準法の規定により12階以上の住戸の開放廊下に面するサッシの外側に甲種防火シャッターが設置され、
-      また11階以上の住戸の壁・天井のクロスは準不燃クロスとなること。
 \item 敷地内の緑地および自主管理緑地遊園については、「川崎市住宅・宅地事業調整要綱」に基づき川崎市と協議のうえ設置されるため、
       将来とも当該施設の維持管理に努めるとともに用途転用はできないこと。
 \end{enumerate}
