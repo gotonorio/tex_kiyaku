@@ -36,7 +36,6 @@
 }
 \usepackage{graphicx}
 \usepackage{calc}
-\usepackage{setspace}
 
 % -----------------------------------------------------------------
 % 管理規約用の設定
@@ -69,34 +68,37 @@
     \date{令和4年4月1日}
     \maketitle
     \vfill      % ここで空白を最大限取る
+
     % 改訂履歴
-    \begingroup
-      \setstretch{0.8}        % 改訂履歴の行間を標準の0.8とする
+    {
+      \renewcommand{\baselinestretch}{0.8}\selectfont
       \subsubsection*{ 規約改定履歴 }
       \vspace*{1\baselineskip}
       \begin{tabbing}
-        \hspace{5mm} \= \hspace{80mm} \= \hspace{100mm} \kill
-        １．\>平成23年版「標準管理規約」に基づき改訂。\>第17期通常総会\\
-        ２．\>第12条第２項及び第３項（民泊禁止）の追加。\>第19期通常総会\\
-        ３．\>「別表」を「別に定める表」として分離。\>第22期12月臨時総会\\
-        ４．\>令和3年版「標準管理規約」に基づき改訂。\>第23期通常総会\\
+        \hspace{5mm} \= \hspace{90mm} \= \hspace{100mm} \kill
+        1.\>平成23年版「標準管理規約」に基づき改訂。\>第17期通常総会\\
+        2.\>第12条第2項及び第3項（民泊禁止）の追加。\>第19期通常総会\\
+        3.\>「別表」を「別に定める表」として分離。\>第22期12月臨時総会\\
+        4.\>令和3年版「標準管理規約」に基づき改訂。\>第23期通常総会\\
       \end{tabbing}
       \begin{center}
         \vspace*{3\baselineskip}
         \author{\Large ソフィア・ガーデンズ川崎 管理組合}
       \end{center}
-    \endgroup
+    }
+
   \end{titlepage}
   \clearpage
 
   %
   % 目次
   %
-  \begingroup
+  {
+    % 目次だけ行間を調整
+    \renewcommand{\baselinestretch}{0.8}\selectfont
     \pagenumbering{roman}   % ページ番号をローマ数字に指定
-    \setstretch{0.8}        % 目次の行間を標準の0.8とする
     \tableofcontents        % 目次をここで挿入
-  \endgroup
+  }
   \clearpage
 
   %
