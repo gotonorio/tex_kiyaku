@@ -22,10 +22,6 @@
 % 画面デバッグ用
 %\usepackage{showframe}
 
-% 1ページをフルに使うためのgeometryパッケージ
-% documentclassで文字数・行数の設定はできなくなる
-\usepackage[top=10truemm,bottom=20truemm,left=25truemm,right=20truemm]{geometry}
-
 % 箇条書き用
 \usepackage{enumitem}
 % 箇条書きを（）番号で表示。
@@ -40,6 +36,9 @@
 % -----------------------------------------------------------------
 % 管理規約用の設定
 % -----------------------------------------------------------------
+% 1ページをフルに使うためのgeometryパッケージ
+%   documentclassで文字数・行数の設定はできなくなる
+\usepackage[top=10truemm,bottom=20truemm,left=25truemm,right=20truemm]{geometry}
 % 改訂履歴、目次以外行間を設定する
 \renewcommand{\baselinestretch}{0.9}
 
@@ -70,8 +69,7 @@
     \vfill      % ここで空白を最大限取る
 
     % 改訂履歴
-    {
-      \renewcommand{\baselinestretch}{0.8}\selectfont
+    { \renewcommand{\baselinestretch}{0.8}\selectfont
       \subsubsection*{ 規約改定履歴 }
       \vspace*{1\baselineskip}
       \begin{tabbing}
@@ -93,9 +91,8 @@
   %
   % 目次
   %
-  {
     % 目次だけ行間を調整
-    \renewcommand{\baselinestretch}{0.8}\selectfont
+  { \renewcommand{\baselinestretch}{0.8}\selectfont
     \pagenumbering{roman}   % ページ番号をローマ数字に指定
     \tableofcontents        % 目次をここで挿入
   }
