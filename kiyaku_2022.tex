@@ -60,32 +60,31 @@
   %
   % 表紙
   %
-  \begin{titlepage}
-    \pagestyle{empty} % 表紙のページ番号は不要
-    \title{ソフィア・ガーデンズ川崎\\管理規約}
-    % 日付を表示
-    \date{令和4年4月1日}
-    \maketitle
-    \vfill      % ここで空白を最大限取る
+  \pagestyle{empty} % 表紙のページ番号は不要
+  \title{ソフィア・ガーデンズ川崎\\管理規約}
+  % 日付を表示
+  \date{令和4年4月1日}
+  \maketitle
+  \thispagestyle{empty}
+  \vfill      % ここで空白を最大限取る
 
-    % 改訂履歴
-    { \renewcommand{\baselinestretch}{0.8}\selectfont
-      \subsubsection*{ 規約改定履歴 }
-      \vspace*{1\baselineskip}
-      \begin{tabbing}
-        \hspace{5mm} \= \hspace{90mm} \= \hspace{100mm} \kill
-        1.\>平成23年版「標準管理規約」に基づき改訂。\>第17期通常総会\\
-        2.\>第12条第2項及び第3項（民泊禁止）の追加。\>第19期通常総会\\
-        3.\>「別表」を「別に定める表」として分離。\>第22期12月臨時総会\\
-        4.\>令和3年版「標準管理規約」に基づき改訂。\>第23期通常総会\\
-      \end{tabbing}
-      \begin{center}
-        \vspace*{3\baselineskip}
-        \author{\Large ソフィア・ガーデンズ川崎 管理組合}
-      \end{center}
-    }
-
-  \end{titlepage}
+  % 改訂履歴
+  \begin{center}
+    \vspace*{3\baselineskip}
+    {\Large ソフィア・ガーデンズ川崎 管理組合}
+  \end{center}
+  \vspace*{2\baselineskip}
+  { \renewcommand{\baselinestretch}{0.8}\selectfont   % 改訂履歴の行間を調整する
+    \subsubsection*{ 規約 改定履歴 }
+    \vspace*{1\baselineskip}
+    \begin{tabbing}
+      \hspace{5mm} \= \hspace{90mm} \= \hspace{100mm} \kill
+      1.\>平成23年版「標準管理規約」に基づき改訂。\>第17期通常総会\\
+      2.\>第12条第2項及び第3項（民泊禁止）の追加。\>第19期通常総会\\
+      3.\>「別表」を「別に定める表」として分離。\>第22期12月臨時総会\\
+      4.\>令和3年版「標準管理規約」に基づき改訂。\>第23期通常総会\\
+    \end{tabbing}
+  }
   \clearpage
 
   %
@@ -99,10 +98,10 @@
   \clearpage
 
   %
-  % 本文
+  % 管理規約　本文
   %
   \pagenumbering{arabic}  % ページ番号をアラビア数字に
-  \setcounter{page}{1}    % 本文のページ番号スタートを１に設定する。
+  \setcounter{page}{1}    % 本文のページ番号スタートを１に設定
   \pagestyle{plain}       % フッターの中央にページを配置
 
   \begin{center}
