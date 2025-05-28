@@ -17,24 +17,32 @@
 ```bash
 （1）limaの起動
 
-$ limactl start template://docker
+    $ limactl start template://docker
 
-起動時にconfigfileの修正を行う。
+（2）起動時にconfigfileの修正を行う。
 
-- mountsを設定している行を検索して下記の追加をする。
-mounts:
-  - location: "~"
-+   writable: true
-  - location: "/tmp/lima"
-    writable: true
+    cpu: 2（デフォルト）
+    memory: 4GiB（デフォルト）
+    disk: 50GiB（デフォルトは100GiB）
 
-（2）linuxにログインしてLaTex用のdockerコンテナを生成する。
-$ limactl shell docker
+mountsを設定している行を検索して下記の追加修正をする。
+必要ならcpu、momory、disk容量を追加記述する。
+    mounts:
+      - location: "~"
+    +   writable: true
+      - location: "/tmp/lima"
+        writable: true
 
-（3）texファイルのあるディレクトリで以下を実行する。
-$ docker run --rm -it -v $PWD:/workdir paperist/texlive-ja:latest
+（3）linuxにログインしてLaTex用のdockerコンテナを生成する。
 
-（3）texファイルをコンパイルしてpdfファイルを作成。
+    $ limactl shell docker
+
+（4）texファイルのあるディレクトリで以下を実行する。
+
+    $ docker run --rm -it -v $PWD:/workdir paperist/texlive-ja:latest
+
+（5）texファイルをコンパイルしてpdfファイルを作成。
     （コンパイル作業はtocファイル作成のため複数回実行する）
-$ lualatex texファイル名.tex
+
+    $ lualatex texファイル名.tex
 ```
