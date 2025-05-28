@@ -1,5 +1,7 @@
 # ソフィア・ガーデンズ川崎　管理規約
 
+ソフィア・ガーデンズ川崎の管理規約TeXファイルです。
+
 - kiyaku_2022.tex（令和3年標準管理規約版）
 - liyaku_2025.tex（令和6年標準管理規約版）
 
@@ -8,7 +10,7 @@
 - Cloud LaTeXでもコンパイルできることを確認済み。
 
 - Dockerイメージとして paperist/alpine-texlive-ja を利用する。（公開を感謝）
-- Macのlimaで確認済み。Windowsの場合はWSL2で同じだと思う（未確認）
+- Macのlimaで確認済み。（Windowsの場合はWSL2で同じだと思う）
 
 ## limaによるdocker環境の作成
 
@@ -19,19 +21,20 @@
 
     $ limactl start template://docker
 
-（2）起動時にconfigfileの修正を行う。
+（2）mountsを設定している行を検索して下記の追加修正をする。
+　　 ※ mountしたディレクトリの書き込みを許可しますが、セキュリティには注意
 
-    cpu: 2（デフォルト）
-    memory: 4GiB（デフォルト）
-    disk: 50GiB（デフォルトは100GiB）
-
-mountsを設定している行を検索して下記の追加修正をする。
-必要ならcpu、momory、disk容量を追加記述する。
     mounts:
       - location: "~"
     +   writable: true
       - location: "/tmp/lima"
         writable: true
+
+（2-2）必要であれば下記の修正も行う。
+
+    cpu: 2（デフォルト）
+    memory: 4GiB（デフォルト）
+    disk: 100GiB（デフォルト）
 
 （3）linuxにログインしてLaTex用のdockerコンテナを生成する。
 
