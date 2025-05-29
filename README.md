@@ -2,8 +2,7 @@
 
 ソフィア・ガーデンズ川崎の管理規約TeXファイルです。
 
-- kiyaku_2022.tex（令和3年標準管理規約版）
-- liyaku_2025.tex（令和6年標準管理規約版）
+- kiyaku.tex（令和6年標準管理規約版）
 
 - LaTeXエンジンはLuaLaTeX
 - 文書クラスはjlreq  
