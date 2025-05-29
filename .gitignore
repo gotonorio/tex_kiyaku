@@ -7,3 +7,6 @@
 .DS_Store
 *.pages
 *.pdf
+.gitignore
+kiyaku_2022.tex
+
