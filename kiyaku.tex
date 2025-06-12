@@ -7,10 +7,8 @@
 % LuaLaTeX + jlreqの基本設定
 % -----------------------------------------------------------------
 \documentclass[
-  % 標準的な日本語文書向け
-  ja=standard,
-  % 片面印刷（両面印刷ならtwoside）
-  notwoside,
+  % 両面印刷なら「twoside」を設定する（geometryの設定で綴じ代を設定すること）
+  % twoside,
   % LuaLaTeXを使う
   luatex,
   % 用紙サイズをA4にする
@@ -43,16 +41,21 @@
 % -----------------------------------------------------------------
 % 1ページをフルに使うためのgeometryパッケージ
 % documentclassで文字数・行数の設定はできなくなる
-\usepackage[top=10truemm,bottom=20truemm,left=25truemm,right=20truemm]{geometry}
+\usepackage[
+  top=10truemm,
+  bottom=20truemm,
+  left=25truemm,
+  right=20truemm,
+%  bindingoffset=10mm    % documentclassでtwosideを設定した場合、綴じ代を設定
+]{geometry}
 % 条文用のスタイル
 \usepackage{luatexja}
 \usepackage{luatexja-fontspec}
 \setmainjfont{IPAexMincho} % 明朝体（好みで変更可）
+
 %
-% 条文表示のマクロ
+% 「条」「項」表示のマクロ
 %
-%% 行継続時の字下げ（全角スペース相当）
-%\newcommand{\hangindentline}{\hspace{1em}}
 % 第1項（本文）：1文字インデント＋2行目以降も字下げ
 \newcommand{\joumain}[1]{%
   \noindent\hangindent=1em\hangafter=1
@@ -64,12 +67,13 @@
   #1\hspace{1em}#2%
 }
 
-% 改訂履歴、目次以外行間を設定する
+% 改訂履歴、目次以外の行間を設定する
 \renewcommand{\baselinestretch}{0.9}
 
 % 第2条「用語の定義」のdescription用
 \setlist[description]{
-  font=\normalfont\bfseries, % ラベルを本文フォント＋太字
+%  font=\normalfont\bfseries, % ラベルを本文フォント＋太字
+  font=\normalfont,          % ラベルを本文フォント
   labelsep=0pt,
   labelwidth=7em,            % ラベル幅（適宜調整）
   leftmargin=8em,            % 説明の開始位置（labelwidthと同じ）
@@ -135,12 +139,12 @@
     \addcontentsline{toc}{subsection}{第1章 総則}
   \end{center}
 
-  \subsubsection*{ 第1条（目的）}
+  \subsubsection*{第１条（目的）}
   \addcontentsline{toc}{subsubsection}{ 第1条（目的）}
   \joumain{この規約は、ソフィア・ガーデンズ川崎マンションの管理又は使用に関する事項等について定めることにより、
   区分所有者の共同の利益を増進し、良好な住環境を確保することを目的とする。}
 
-  \subsubsection*{ 第2条（定義）}
+  \subsubsection*{第２条（定義）}
   \addcontentsline{toc}{subsubsection}{ 第2条（定義）}
   \joumain{この規約において、次に掲げる用語の意義は、それぞれ当該各号に定めるところによる。}
   % 用語の定義
@@ -166,22 +170,22 @@
     記録したもの (以下「電磁的記録」という。)を交付する方法
   \end{enumerate}
   
-  \subsubsection*{ 第3条（規約及び総会の決議の遵守義務）}
+  \subsubsection*{第３条（規約及び総会の決議の遵守義務）}
   \addcontentsline{toc}{subsubsection}{ 第3条（規約及び総会の決議の遵守義務）}
   \joumain{区分所有者は、円滑な共同生活を維持するため、この規約及び総会の決議を誠実に遵守しなければならない。}
   \kou{２}{区分所有者は、同居する者に対してこの規約及び総会の決議を遵守させなければならない。}
 
-  \subsubsection*{ 第4条（対象物件の範囲）}
+  \subsubsection*{第４条（対象物件の範囲）}
   \addcontentsline{toc}{subsubsection}{ 第4条（対象物件の範囲）}
   \joumain{この規約の対象となる物件の範囲は、別に定める表に記載された敷地、建物及び附属施設
   （以下「対象物件」という。）とする。}
 
-  \subsubsection*{ 第5条（規約及び総会の決議の効力）}
+  \subsubsection*{第５条（規約及び総会の決議の効力）}
   \addcontentsline{toc}{subsubsection}{ 第5条（規約及び総会の決議の効力）}
   \joumain{この規約及び総会の決議は、区分所有者の包括承継人及び特定承継人に対しても、その効力を有する。}
   \kou{２}{占有者は、対象物件の使用方法につき、区分所有者がこの規約及び総会の決議に基づいて負う義務と同一の義務を負う。}
 
-  \subsubsection*{ 第6条（管理組合）}
+  \subsubsection*{第６条（管理組合）}
   \addcontentsline{toc}{subsubsection}{ 第6条（管理組合）}
   \joumain{区分所有者は、第1条に定める目的を達成するため、区分所有者全員をもって「ソフィア・ガーデンズ川崎
   管理組合」（以下「管理組合」という。）を構成する。}
@@ -189,11 +193,11 @@
   \kou{３}{管理組合の業務、組織等については、第6章に定めるところによる。}
 
   \begin{center}
-    \subsection*{第2章 専有部分等の範囲}
+    \subsection*{第２章 専有部分等の範囲}
     \addcontentsline{toc}{subsection}{第2章 専有部分等の範囲}
   \end{center}
 
-  \subsubsection*{ 第7条（専有部分の範囲）}
+  \subsubsection*{ 第７条（専有部分の範囲）}
   \addcontentsline{toc}{subsubsection}{ 第7条（専有部分の範囲）}
   \joumain{対象物件のうち区分所有権の対象となる専有部分は、住戸番号を付した住戸とする。}
   \kou{２}{前項の専有部分を他から区分する構造物の帰属については、次のとおりとする。}
@@ -207,16 +211,16 @@
   ものとする。ただし、これらの設備のうち専有部分内にある設備の管理については、通常の使用に伴うものは、}
   当該専有部分の区分所有者の責任と負担において行わなければならない。
 
-  \subsubsection*{第8条（共用部の範囲）}
+  \subsubsection*{第８条（共用部の範囲）}
   \addcontentsline{toc}{subsubsection}{ 第8条（共用部の範囲）}
   \joumain{対象物件のうち共用部分の範囲は、別に定める表に掲げるとおりとする。}
   
   \begin{center}
-    \subsection*{第3章 敷地および共用部分等の共有}
+    \subsection*{第３章 敷地および共用部分等の共有}
     \addcontentsline{toc}{subsection}{第3章 敷地および共用部分等の共有}
   \end{center}
 
-  \subsubsection*{第9条（共有）}
+  \subsubsection*{第９条（共有）}
   \addcontentsline{toc}{subsubsection}{ 第9条（共有）}
   \joumain{対象物件のうち敷地および共用部分等は、区分所有者の共有とする。}
 
