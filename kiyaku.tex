@@ -33,6 +33,7 @@
   leftmargin=3.0em       % 全体の左余白も調整可
 }
 % 「号」（箇条書き）を漢数字で表示する場合は以下のようにする。
+% 「号」だけ漢数字なのは、どうかなということで採用しない。
 %  \begin{itemize}[label={}, leftmargin=2em, itemindent=-2em]
 %    \item 一. 号1...
 %    \item 二. 号2...
@@ -48,20 +49,37 @@
 % 1ページをフルに使うためのgeometryパッケージ
 % documentclassで文字数・行数の設定はできなくなる
 \usepackage[
-  top=10truemm,
-  bottom=20truemm,
-  left=25truemm,
-  right=20truemm,
-%  bindingoffset=10mm    % documentclassでtwosideを設定した場合、綴じ代を設定
+  top=25mm,
+  bottom=25mm,
+  left=25mm,
+  right=20mm,
+%  bindingoffset=5mm    % 製本印刷用（twosideを設定した場合、綴じ代を設定）
 ]{geometry}
-% 条文用のスタイル
+
+% --- フッター中央にページ番号 ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % 初期化
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- フォント設定（LuaLaTeX向け） ---
 \usepackage{luatexja}
 \usepackage{luatexja-fontspec}
-\setmainjfont{IPAexMincho} % 明朝体（好みで変更可）
+\setmainjfont{IPAexMincho}        % 明朝体（TeXLiveに標準インストール済み）
+% \setmainjfont{Source Han Serif} % 使ってみたいが源ノ明朝はインストールしていない。
+\setmainfont{TeX Gyre Pagella}    % 任意
 
-%
-% 「条」「項」表示のマクロ
-%
+% --- jlreqの組版設定（句読点・禁則など） ---
+% jlreq文書クラスでは、luatexjaパッケージが自動的に行ってくれる。
+
+%% 条文用のスタイル
+%\usepackage{luatexja}
+%\usepackage{luatexja-fontspec}
+%\setmainjfont{IPAexMincho} % 明朝体（好みで変更可）
+
+% --- 「条」「項」表示のマクロ ---
 % 第1項（本文）：1文字インデント＋2行目以降も字下げ
 \newcommand{\joumain}[1]{%
   \noindent\hangindent=1em\hangafter=1
@@ -106,7 +124,7 @@
   % 改訂履歴
   \begin{center}
     \vspace*{3\baselineskip}
-    {\Large ソフィア・ガーデンズ川崎 管理組合}
+    \author{\Large ソフィア・ガーデンズ川崎 管理組合}
   \end{center}
   \vspace*{2\baselineskip}
   { \renewcommand{\baselinestretch}{0.8}\selectfont   % 改訂履歴の行間を調整する
