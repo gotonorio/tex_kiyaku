@@ -43,9 +43,20 @@
 \usepackage{graphicx}
 \usepackage{calc}
 
-% -----------------------------------------------------------------
-% 管理規約用の設定
-% -----------------------------------------------------------------
+% --- 「条」「項」表示のマクロ ---
+% 第1項（本文）：1文字インデント＋2行目以降も字下げ
+\newcommand{\joumain}[1]{%
+  \noindent\hangindent=1em\hangafter=1
+  \hspace{1em}#1%
+}
+% 第2項以降：項番号（全角数字）＋字下げ
+\newcommand{\kou}[2]{%
+  \par\noindent\hangindent=1em\hangafter=1
+  #1\hspace{1em}#2%
+}
+% 改訂履歴、目次以外の行間を設定する
+\renewcommand{\baselinestretch}{0.9}
+
 % 1ページをフルに使うためのgeometryパッケージ
 % documentclassで文字数・行数の設定はできなくなる
 \usepackage[
@@ -71,29 +82,9 @@
 % \setmainjfont{Source Han Serif} % 使ってみたいが源ノ明朝はインストールしていない。
 \setmainfont{TeX Gyre Pagella}    % 任意
 
-% --- jlreqの組版設定（句読点・禁則など） ---
-% jlreq文書クラスでは、luatexjaパッケージが自動的に行ってくれる。
-
-%% 条文用のスタイル
-%\usepackage{luatexja}
-%\usepackage{luatexja-fontspec}
-%\setmainjfont{IPAexMincho} % 明朝体（好みで変更可）
-
-% --- 「条」「項」表示のマクロ ---
-% 第1項（本文）：1文字インデント＋2行目以降も字下げ
-\newcommand{\joumain}[1]{%
-  \noindent\hangindent=1em\hangafter=1
-  \hspace{1em}#1%
-}
-% 第2項以降：項番号（全角数字）＋字下げ
-\newcommand{\kou}[2]{%
-  \par\noindent\hangindent=1em\hangafter=1
-  #1\hspace{1em}#2%
-}
-
-% 改訂履歴、目次以外の行間を設定する
-\renewcommand{\baselinestretch}{0.9}
-
+% -----------------------------------------------------------------
+% 管理規約用の設定
+% -----------------------------------------------------------------
 % 第2条「用語の定義」のdescription用
 \setlist[description]{
 %  font=\normalfont\bfseries, % ラベルを本文フォント＋太字
