@@ -1,14 +1,13 @@
 %
 % 管理規約
-% 製本印刷用（本文ページは奇数ページ始まりとする。
-% programming by N.Goto 2025-06-17 by LuaLaTeX + jlreq
+% programming by N.Goto 2025-05-16 by LuaLaTeX
 %
 
 % -----------------------------------------------------------------
 % LuaLaTeX + jlreqの基本設定
 % -----------------------------------------------------------------
 \documentclass[
-  % 両面印刷なら「twoside」を設定する（製本する場合geometryの設定で綴じ代を設定する）
+  % 製本印刷なら「twoside」を設定する（製本する場合geometryの設定で綴じ代を設定する）
   twoside,
   % LuaLaTeXを使う
   luatex,
@@ -33,23 +32,34 @@
   labelsep=0.5em,        % 番号と本文の間に適度なスペース
   leftmargin=3.0em       % 全体の左余白も調整可
 }
+
 % 「号」（箇条書き）を漢数字で表示する場合は以下のようにする。
-% 「号」だけ漢数字なのは、どうかなということで採用しない。
-%  \begin{itemize}[label={}, leftmargin=2em, itemindent=-2em]
-%    \item 一. 号1...
-%    \item 二. 号2...
-%    \item 三. 号3...
+%  正式には「号」だけ漢数字なのだが、どうかなということで採用しない。
+%  \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
+%    \item 一　号1...
+%    \item 二　号2...
+%    \item 三　号3...
 %  \end{itemize}
 
 \usepackage{graphicx}
 \usepackage{calc}
 
-% -----------------------------------------------------------------
-% 管理規約用の設定
-% -----------------------------------------------------------------
+% --- 「条」「項」表示のマクロ ---
+% 第1項（本文）：1文字インデント＋2行目以降も字下げ
+\newcommand{\joumain}[1]{%
+  \noindent\hangindent=1em\hangafter=1
+  \hspace{1em}#1%
+}
+% 第2項以降：項番号（全角数字）＋字下げ
+\newcommand{\kou}[2]{%
+  \par\noindent\hangindent=1em\hangafter=1
+  #1\hspace{1em}#2%
+}
+% 改訂履歴、目次以外の行間を設定する
+\renewcommand{\baselinestretch}{0.9}
+
 % 1ページをフルに使うためのgeometryパッケージ
 % documentclassで文字数・行数の設定はできなくなる
-% --- 余白設定 ---
 \usepackage[
   top=25mm,
   bottom=25mm,
@@ -73,24 +83,9 @@
 % \setmainjfont{Source Han Serif} % 使ってみたいが源ノ明朝はインストールしていない。
 \setmainfont{TeX Gyre Pagella}    % 任意
 
-% --- jlreqの組版設定（句読点・禁則など） ---
-% jlreq文書クラスでは、luatexjaパッケージが自動的に行ってくれる。
-
-% --- 「条」「項」表示のマクロ ---
-% 第1項（本文）：1文字インデント＋2行目以降も字下げ
-\newcommand{\joumain}[1]{%
-  \noindent\hangindent=1em\hangafter=1
-  \hspace{1em}#1%
-}
-% 第2項以降：項番号（全角数字）＋字下げ
-\newcommand{\kou}[2]{%
-  \par\noindent\hangindent=1em\hangafter=1
-  #1\hspace{1em}#2%
-}
-
-% 改訂履歴、目次以外の行間を設定する
-\renewcommand{\baselinestretch}{0.9}
-
+% -----------------------------------------------------------------
+% 管理規約用の設定
+% -----------------------------------------------------------------
 % 第2条「用語の定義」のdescription用
 \setlist[description]{
 %  font=\normalfont\bfseries, % ラベルを本文フォント＋太字
@@ -147,7 +142,8 @@
     \pagenumbering{roman}   % ページ番号をローマ数字に指定
     \tableofcontents        % 目次をここで挿入
   }
-  \cleardoublepage          % 本文ページが奇数ページから始まる
+  % 製本印刷の場合、本文ページは奇数ページから始める
+  \cleardoublepage 
 
   %
   % 管理規約　本文
