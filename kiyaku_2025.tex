@@ -49,22 +49,20 @@
 % 画面デバッグ用
 %\usepackage{showframe}
 
+% subsectionを左揃え（中央寄せをキャンセル）
+%\ModifyHeading{subsubsection}{
+%  format = \normalfont\normalsize\bfseries,
+%  align = left,
+%}
+
 % 箇条書き用
 \usepackage{enumitem}
-% 箇条書きを（）番号で表示。（漢数字対応が上手く行かない）
+% 箇条書きを（）番号で表示。
 \setlist[enumerate,1]{
   label=(\arabic*),
   labelsep=0.5em,        % 番号と本文の間のスペース
   leftmargin=3.0em       % 全体の左余白
 }
-
-% 「号」（箇条書き）を漢数字で表示する場合は以下のようにする。
-%  正式には「号」だけ漢数字なのだが、どうかなということで採用しない。
-%  \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
-%    \item 一　号1...
-%    \item 二　号2...
-%    \item 三　号3...
-%  \end{itemize}
 
 \usepackage{graphicx}
 \usepackage{calc}
@@ -107,7 +105,6 @@
 %    \item \toKansuji{2}号2...
 %    \item \toKansuji{2}号3...
 %  \end{itemize}
-
 
 % 改訂履歴、目次以外の行間を設定する
 \renewcommand{\baselinestretch}{0.9}
@@ -183,7 +180,7 @@
       2.\>第12条第2項及び第3項（民泊禁止）の追加。\>第19期通常総会\\
       3.\>「別表」を「別に定める表」として分離。\>第22期12月臨時総会\\
       4.\>令和3年版「標準管理規約」に基づき改訂。\>第23期通常総会\\
-      5.\>令和6年版「標準管理規約」に基づき改訂。\>第27期通常総会\\
+      5.\>令和7年版「標準管理規約」に基づき改訂。\>第28期通常総会\\
     \end{tabbing}
   }
   \clearpage
@@ -198,6 +195,7 @@
   }
   % 製本印刷の場合、本文ページは奇数ページから始める
   %\cleardoublepage 
+  % pdfの場合、本文ページは次のページから始める
   \clearpage
 
   %
@@ -213,12 +211,12 @@
   \end{center}
 
   \subsubsection*{第１条（目的）}
-  \addcontentsline{toc}{subsubsection}{ 第1条（目的）}
+  \addcontentsline{toc}{subsubsection}{第1条（目的）}
   \joumain{この規約は、ソフィア・ガーデンズ川崎マンションの管理又は使用に関する事項等について定めることにより、
   区分所有者の共同の利益を増進し、良好な住環境を確保することを目的とする。}
 
   \subsubsection*{第２条（定義）}
-  \addcontentsline{toc}{subsubsection}{ 第2条（定義）}
+  \addcontentsline{toc}{subsubsection}{第2条（定義）}
   \joumain{この規約において、次に掲げる用語の意義は、それぞれ当該各号に定めるところによる。}
   % 用語の定義
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
@@ -275,22 +273,22 @@
 %  \end{itemize}
   
   \subsubsection*{第３条（規約及び総会の決議の遵守義務）}
-  \addcontentsline{toc}{subsubsection}{ 第3条（規約及び総会の決議の遵守義務）}
+  \addcontentsline{toc}{subsubsection}{第3条（規約及び総会の決議の遵守義務）}
   \joumain{区分所有者は、円滑な共同生活を維持するため、この規約及び総会の決議を誠実に遵守しなければならない。}
   \kou{２}{区分所有者は、同居する者に対してこの規約及び総会の決議を遵守させなければならない。}
 
   \subsubsection*{第４条（対象物件の範囲）}
-  \addcontentsline{toc}{subsubsection}{ 第4条（対象物件の範囲）}
+  \addcontentsline{toc}{subsubsection}{第4条（対象物件の範囲）}
   \joumain{この規約の対象となる物件の範囲は、別に定める表に記載された敷地、建物及び附属施設
   （以下「対象物件」という。）とする。}
 
   \subsubsection*{第５条（規約及び総会の決議の効力）}
-  \addcontentsline{toc}{subsubsection}{ 第5条（規約及び総会の決議の効力）}
+  \addcontentsline{toc}{subsubsection}{第5条（規約及び総会の決議の効力）}
   \joumain{この規約及び総会の決議は、区分所有者の包括承継人及び特定承継人に対しても、その効力を有する。}
   \kou{２}{占有者は、対象物件の使用方法につき、区分所有者がこの規約及び総会の決議に基づいて負う義務と同一の義務を負う。}
 
   \subsubsection*{第６条（管理組合）}
-  \addcontentsline{toc}{subsubsection}{ 第6条（管理組合）}
+  \addcontentsline{toc}{subsubsection}{第6条（管理組合）}
   \joumain{区分所有者は、第1条に定める目的を達成するため、区分所有者全員をもって「ソフィア・ガーデンズ川崎
   管理組合」（以下「管理組合」という。）を構成する。}
   \kou{２}{管理組合は、事務所を対象物件内に置く。}
@@ -301,8 +299,8 @@
     \addcontentsline{toc}{subsection}{第2章 専有部分等の範囲}
   \end{center}
 
-  \subsubsection*{ 第７条（専有部分の範囲）}
-  \addcontentsline{toc}{subsubsection}{ 第7条（専有部分の範囲）}
+  \subsubsection*{第７条（専有部分の範囲）}
+  \addcontentsline{toc}{subsubsection}{第7条（専有部分の範囲）}
   \joumain{対象物件のうち区分所有権の対象となる専有部分は、住戸番号を付した住戸とする。}
   \kou{２}{前項の専有部分を他から区分する構造物の帰属については、次のとおりとする。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
@@ -316,7 +314,7 @@
   当該専有部分の区分所有者の責任と負担において行わなければならない。
 
   \subsubsection*{第８条（共用部の範囲）}
-  \addcontentsline{toc}{subsubsection}{ 第8条（共用部の範囲）}
+  \addcontentsline{toc}{subsubsection}{第8条（共用部の範囲）}
   \joumain{対象物件のうち共用部分の範囲は、別に定める表に掲げるとおりとする。}
   
   \begin{center}
@@ -325,15 +323,15 @@
   \end{center}
 
   \subsubsection*{第９条（共有）}
-  \addcontentsline{toc}{subsubsection}{ 第9条（共有）}
+  \addcontentsline{toc}{subsubsection}{第9条（共有）}
   \joumain{対象物件のうち敷地および共用部分等は、区分所有者の共有とする。}
 
   \subsubsection*{第10条（共有持分）}
-  \addcontentsline{toc}{subsubsection}{ 第10条（共有持分）}
+  \addcontentsline{toc}{subsubsection}{第10条（共有持分）}
   \joumain{各区分所有者の共有持分は、別に定める表に掲げるとおりとする。}
 
   \subsubsection*{第11条（分割請求および単独処分の禁止）}
-  \addcontentsline{toc}{subsubsection}{ 第11条（分割請求および単独処分の禁止）}
+  \addcontentsline{toc}{subsubsection}{第11条（分割請求および単独処分の禁止）}
   \joumain{区分所有者は、敷地又は共用部分等の分割を請求することはできない。}
   \kou{２}{区分所有者は、専有部分と敷地及び共用部分等の共有持分とを分離して譲渡、抵当権の設定等の
   処分をしてはならない。}
@@ -344,7 +342,7 @@
   \end{center}
 
   \subsubsection*{第12条（専有部分の用途）}
-  \addcontentsline{toc}{subsubsection}{ 第12条（専有部分の用途）}
+  \addcontentsline{toc}{subsubsection}{第12条（専有部分の用途）}
   \joumain{区分所有者は、その専有部分を専ら住宅として使用するものとし、他の用途に供してはならない。}
   \kou{２}{区分所有者は、その専有部分を住宅宿泊事業法第3条第1項の届け出を行なって営む同法第2条
   第3項の住宅宿泊事業に使用してはならない。}
@@ -352,11 +350,11 @@
   意義等の申し出がある場合には、当該区分所有者は自己の責任と負担においてこれを解決するものとする。}
 
   \subsubsection*{第13条（敷地及び共用部分等の用法）}
-  \addcontentsline{toc}{subsubsection}{ 第13条（敷地及び共用部分等の用法）}
+  \addcontentsline{toc}{subsubsection}{第13条（敷地及び共用部分等の用法）}
   \joumain{区分所有者は、敷地及び共用部分等をそれぞれの通常の用法に従って使用しなければならない。}
   
   \subsubsection*{第14条（バルコニー等の専用使用権）}
-  \addcontentsline{toc}{subsubsection}{ 第14条（バルコニー等の専用使用権）}
+  \addcontentsline{toc}{subsubsection}{第14条（バルコニー等の専用使用権）}
   \joumain{区分所有者は、別に定める表に掲げるバルコニー、玄関扉、窓枠、窓ガラス、一階に面する庭
   （以下この条、第21条第1項及び別に定める表において「バルコニー等」という。）について、同表に掲げる
   とおり、専用使用権を有することを承認する。}
@@ -366,7 +364,7 @@
   バルコニー等を使用することができる。}
 
   \subsubsection*{第15条（駐車場の使用）}
-  \addcontentsline{toc}{subsubsection}{ 第15条（駐車場の使用）}
+  \addcontentsline{toc}{subsubsection}{第15条（駐車場の使用）}
   \joumain{管理組合は、別添の図に示す駐車場について、特定の区分所有者およびその同居する親族又は住戸の賃借人に駐車場使用契約により
   使用させることができる。}
   \kou{２}{前項により駐車場を使用している者は、別に定めるところにより、管理組合に駐車場使用料を納入しなければならない。}
@@ -374,7 +372,7 @@
   その区分所有者又はその同居する親族若しくは当該専有部の賃借人の駐車場使用契約は効力を失う。}
 
   \subsubsection*{第16条（敷地及び共用部分等の第三者の使用）}
-  \addcontentsline{toc}{subsubsection}{ 第16条（敷地及び共用部分等の第三者の使用）}
+  \addcontentsline{toc}{subsubsection}{第16条（敷地及び共用部分等の第三者の使用）}
   \joumain{管理組合は、次に掲げる敷地及び共用部分 等の一部を、それぞれ当該各号に掲げる者 に使用させることができる。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}管理事務室、管理用倉庫、機械室その他対象物件の管理の執行上必要な施設 管理事務
@@ -388,7 +386,7 @@
   第三者に使用させることができる。}
 
   \subsubsection*{第17条（専有部分の修繕等）}
-  \addcontentsline{toc}{subsubsection}{ 第17条（専有部分の修繕等）}
+  \addcontentsline{toc}{subsubsection}{第17条（専有部分の修繕等）}
   \joumain{区分所有者は、その専有部分について、修繕、模様替え又は建物に定着する物件の取付け若しくは取替え
   （以下「修繕等」という。）であって共用部分又は他の専有部分に影響を与えるおそれのあるものを行おうとするときは、
   あらかじめ、理事長（第38条に定める理事長をいう。以下同じ。）にその旨を申請し、書面による承認を受けなければならない。}
@@ -406,11 +404,11 @@
   \kou{８}{本条の規定のほか、具体的な手続き、区分所有者の遵守すべき事項等詳細については、基本使用規則および各細則に別途定める。}
 
   \subsubsection*{第18条（基本使用規則および各細則）}
-  \addcontentsline{toc}{subsubsection}{ 第18条（基本使用規則および各細則）}
+  \addcontentsline{toc}{subsubsection}{第18条（基本使用規則および各細則）}
   \joumain{対象物件の使用については、別に基本使用規則および各細則を定める。}
 
   \subsubsection*{第19条（専有部分の貸与）}
-  \addcontentsline{toc}{subsubsection}{ 第19条（専有部分の貸与）}
+  \addcontentsline{toc}{subsubsection}{第19条（専有部分の貸与）}
   \joumain{区分所有者は、その専有部分を第三者に貸与する場合には、この規約及び基本使用規則、細則に定める事項をその第三者に
   遵守させなければならない。}
   \kou{２}{前項の場合において、区分所有者は、その貸与に係る契約にこの規約及び使用細則に定める事項を遵守する
@@ -419,7 +417,7 @@
   \kou{３}{第１項の場合において、区分所有者は、当該第三者に、専有部分を借用した旨の届出を管理組合に提出させなければならない。}
   
   \subsubsection*{第19条の２（暴力団員の排除）}
-  \addcontentsline{toc}{subsubsection}{ 第19条の２（暴力団員の排除）}
+  \addcontentsline{toc}{subsubsection}{第19条の２（暴力団員の排除）}
   \joumain{区分所有者は、その専有部分を第三者に貸与する場合には、前条に定めるもののほか、次に掲げる内容を含む条項をその貸与に
   係る契約に定めなければならない。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
@@ -429,7 +427,7 @@
     を解約することができること。
   \item \toKansuji{3}区分所有者が前号の解約権を行使しないときは、管理組合は、区分所有者に代理して解約権を行使することができること。
     \end{itemize}
-  \kou{２}{前項の場合において、区分所有者は、前項第3号による解約権の代理行使を管理組合に認める旨の書面を提出
+  \kou{２}{前項の場合において、区分所有者は、前項第三号による解約権の代理行使を管理組合に認める旨の書面を提出
   するとともに、契約の相手方に暴力団員ではないこと及び契約後において暴力団員にならないことを確約する旨の誓約書を
   管理組合に提出させなければならない。}
   
@@ -441,12 +439,12 @@
   \end{center}
 
   \subsubsection*{第20条（区分所有者の責務）}
-  \addcontentsline{toc}{subsubsection}{ 第20条（区分所有者の責務）}
+  \addcontentsline{toc}{subsubsection}{第20条（区分所有者の責務）}
   \joumain{区分所有者は、管理組合の構成員として相互に協力し、対象物件について、その価値及び機能の維持増進を図るため、
   常に適正かつ円滑な管理を行うよう努めなければならない。}
 
   \subsubsection*{第21条（敷地及び共用部分等の管理）}
-  \addcontentsline{toc}{subsubsection}{ 第21条（敷地及び共用部分等の管理）}
+  \addcontentsline{toc}{subsubsection}{第21条（敷地及び共用部分等の管理）}
   \joumain{敷地及び共用部分等の管理については、管理組合がその責任と負担においてこれを行うものとする。
   ただし、バルコニー等の保存行為(区分所有法第18条第1項ただし書の「保存行為」をいう。以下同じ。)のうち、
   通常の使用に伴うものについては、専用使用権を有する者がその責任と負担においてこれを行わなければならない。}
@@ -464,7 +462,7 @@
   行うことができる。}
   
   \subsubsection*{第22条（窓ガラス等の改良）}
-  \addcontentsline{toc}{subsubsection}{ 第22条（窓ガラス等の改良）}
+  \addcontentsline{toc}{subsubsection}{第22条（窓ガラス等の改良）}
   \joumain{共用部分のうち各住戸に附属する窓枠、窓ガラス、玄関扉その他の開口部に係る改良工事であって、防犯、
   防音又は断熱等の住宅の性能の向上等に資するものについては、管理組合がその責任と負担において、計画
   修繕としてこれを実施するものとする。}
@@ -472,7 +470,7 @@
   承認を受けることにより、「窓ガラス等の改良細則」に則って当該工事を当該区分所有者の責任と負担において実施することができる。}
           
   \subsubsection*{第23条（必要箇所への立入り等）}
-  \addcontentsline{toc}{subsubsection}{ 第23条（必要箇所への立入り）}
+  \addcontentsline{toc}{subsubsection}{第23条（必要箇所への立入り）}
   \joumain{前2条により管理を行う者は、管理を行うために必要な範囲内において、他の者が管理する専有部分若しくは専用
   使用部分への立入り又は自らこれに保存行為を実施することを請求することができる。}
   \kou{２}{前項により立入り又は保存行為の実施を請求された者は、正当な理由がなければこれを拒否してはならない。}
@@ -484,11 +482,11 @@
   \kou{５}{立入りをした者は、速やかに立入りをした箇所を原状に復さなければならない。}
 
   \subsubsection*{第24条（損害保険契約の締結）}
-  \addcontentsline{toc}{subsubsection}{ 第24条（損害保険契約の締結）}
+  \addcontentsline{toc}{subsubsection}{第24条（損害保険契約の締結）}
   \joumain{区分所有者は、共用部分等に関し、管理組合が火災保険、地震保険その他の損害保険の契約を締結することを承認する。}
 
   \subsubsection*{第24条の2（保険金等の請求及び受領）}
-  \addcontentsline{toc}{subsubsection}{ 第24条の2（保険金等の請求及び受領）}
+  \addcontentsline{toc}{subsubsection}{第24条の2（保険金等の請求及び受領）}
   \joumain{理事長は、前条の契約に基づく保険金並びに敷地及び共用部分等について生じた損害賠償金及び不当利得による返還金
   （以下「保険金等」という。）の請求及び受領について、区分所有者及び区分所有者であった者（以下「旧区分所有者」という。）を代理する。}
   \kou{２}{理事長は、理事会の決議を経て、保険金等の請求及び受領に関し、区分所有者及び旧区分所有者のために、
@@ -512,7 +510,7 @@
   \end{center}
 
   \subsubsection*{第25条（管理費等）}
-  \addcontentsline{toc}{subsubsection}{ 第25条（管理費等）}
+  \addcontentsline{toc}{subsubsection}{第25条（管理費等）}
   \joumain{区分所有者は、敷地及び共用部分等の管理に要する経費に充てるため、次の費用（以下「管理費等」という。）
   を管理組合に納入しなければならない。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
@@ -524,30 +522,29 @@
   \kou{３}{第1項各号の額は別に定める。}
 
   \subsubsection*{第26条（承継人に対する債権の行使）}
-  \addcontentsline{toc}{subsubsection}{ 第26条（承継人に対する債権の行使）}
+  \addcontentsline{toc}{subsubsection}{第26条（承継人に対する債権の行使）}
   \joumain{管理組合が管理費等について有する債権は、区分所有者の包括承継人及び特定承継人に対しても行うことができる。}
 
   \subsubsection*{第27条（管理費および全体利用施設維持費）}
-  \addcontentsline{toc}{subsubsection}{ 第27条（管理費および全体利用施設維持費）}
+  \addcontentsline{toc}{subsubsection}{第27条（管理費および全体利用施設維持費）}
   \joumain{管理費は、次の各号に揚げる通常の管理に要する経費に充当する。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
-    \item \toKansuji{1}管理員人件費および管理委託費
+    \item \toKansuji{1}管理員人件費
     \item \toKansuji{2}公租公課
     \item \toKansuji{3}共用設備の保守維持費および運転費
     \item \toKansuji{4}備品費、通信費その他の事務費
     \item \toKansuji{5}共用部分等に係る火災保険料その他の損害保険料
     \item \toKansuji{6}経常的な補修費
     \item \toKansuji{7}清掃費、消毒費及びゴミ処理費
-    \item \toKansuji{8}共用の水道料、電気料等の光熱費
-    \item \toKansuji{9}管理組合の運営に要する費用
-    \item \toKansuji{10}その他敷地および共用部分等の通常の管理に要する費用
-    \item \toKansuji{11}専門知識を有する者の活用に要する費用
-    \item \toKansuji{12}その他第32条に定める業務に要する費用
+    \item \toKansuji{8}委託業務費
+    \item \toKansuji{9}専門知識を有する者の活用に要する費用
+    \item \toKansuji{10}管理組合の運営に要する費用
+    \item \toKansuji{11}その他第32条に定める業務に要する費用（次条に規定する経費を除く。）
   \end{itemize}
   \kou{２}{全体利用施設維持費は隣接する自主管理緑地遊園施設の通常の管理に要する経費に充当する。}
 
   \subsubsection*{第28条（修繕積立金）}
-  \addcontentsline{toc}{subsubsection}{ 第28条（修繕積立金）}
+  \addcontentsline{toc}{subsubsection}{第28条（修繕積立金）}
   \joumain{管理組合は、各区分所有者が納入する修繕積立金を積み立てるものとし、積み立てた修繕積立金は、次の各号
   に揚げる特別の管理に要する経費に充当する場合に限って取り崩すことができる。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
@@ -574,7 +571,7 @@
   \kou{４}{修繕積立金については、管理費とは区分して経理しなければならない。}
 
   \subsubsection*{第29条（使用料）}
-  \addcontentsline{toc}{subsubsection}{ 第29条（使用料）}
+  \addcontentsline{toc}{subsubsection}{第29条（使用料）}
   \joumain{駐車場使用料その他の敷地及び共用部分等に係る使用料（以下「使用料」という。）は、それらの管理に要する
   費用に充てるほか、修繕積立金として積み立てる。}
   \kou{２}{駐車場使用料は管理費及び修繕積立金とは区分して経理する。}
@@ -587,11 +584,11 @@
   \end{center}
 
   \subsubsection*{第30条（組合員の資格）}
-  \addcontentsline{toc}{subsubsection}{ 第30条（組合員の資格）}
+  \addcontentsline{toc}{subsubsection}{第30条（組合員の資格）}
   \joumain{組合員の資格は、区分所有者となったときに取得し、区分所有者でなくなったときに喪失する。}
 
   \subsubsection*{第31条（届出義務）}
-  \addcontentsline{toc}{subsubsection}{ 第31条（届出義務）}
+  \addcontentsline{toc}{subsubsection}{第31条（届出義務）}
   \joumain{新たに組合員の資格を取得し又は喪失した者は、直ちにその旨を別に定める書面により管理組合に届け出なければならない。}
   \kou{２}{組合員は、前項で届け出た内容に変更がある場合には、直ちにその旨を書面により届け出なければならない。}
 
@@ -620,7 +617,7 @@
   \end{center}
 
   \subsubsection*{第32条（業務）}
-  \addcontentsline{toc}{subsubsection}{ 第32条（業務）}
+  \addcontentsline{toc}{subsubsection}{第32条（業務）}
   \joumain{管理組合は、建物並びにその敷地及び附属施設の管理のため、次の各号に掲げる業務を行う。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}管理組合が管理する敷地及び共用部分等（以下本条及び第48条において「組合管理部分」という。）
@@ -637,7 +634,7 @@
     \item \toKansuji{11}官公署、町内会等との渉外業務
     \item \toKansuji{12}マンション及び周辺の風紀、秩序及び安全の維持、防災並びに居住環境の維持及び向上に関する業務
     \item \toKansuji{13}広報及び連絡業務
-    \item {14}管理組合の消滅時における残余財産の清算
+    \item \toKansuji{14}管理組合の消滅時における残余財産の清算
     \item \toKansuji{15}その他建物並びにその敷地及び付属施設の管理に関する業務
   \end{itemize}
   \kou{２}{前項といえども、自主管理緑地遊園施設に関する協定書および全体利用施設協議会運営規則に
@@ -655,12 +652,12 @@
   \kou{３}{理事長は、前項の業務において防火管理者が改善を申し入れたときは、必要な措置を講じなければならない。}
 
   \subsubsection*{第33条（業務の委託等）}
-  \addcontentsline{toc}{subsubsection}{ 第33条（業務の委託等）}
+  \addcontentsline{toc}{subsubsection}{第33条（業務の委託等）}
   \joumain{管理組合は、第32条に定める業務の全部又は一部を、マンション管理業者（適正化法第2条第八号の
   「マンション管理業者」をいう。）等第三者に委託し、又は請け負わせて執行することができる。}
 
   \subsubsection*{第34条（専門知識を有する者の活用）}
-  \addcontentsline{toc}{subsubsection}{ 第34条（専門知識を有する者の活用）}
+  \addcontentsline{toc}{subsubsection}{第34条（専門知識を有する者の活用）}
   \joumain{管理組合は、マンション管理士（適正化法第2条第五号の「マンション管理士」をいう。）その他マンション管理
   に関する各分野の専門的知識を有する者に対し、管理組合の運営その他マンションの管理に関し、相談したり、
   助言、指導その他の援助を求めたりすることができる。}
@@ -671,7 +668,7 @@
   \end{center}
 
   \subsubsection*{第35条（役員）}
-  \addcontentsline{toc}{subsubsection}{ 第35条（役員）}
+  \addcontentsline{toc}{subsubsection}{第35条（役員）}
   \joumain{管理組合に次の役員を置くものとし、定員については別に定める細則による。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}理事長
@@ -685,11 +682,11 @@
   \kou{４}{組合員以外の者から理事又は監事を選任する場合の選任方法については細則で定める。}
 
   \subsubsection*{第36条（役員の任期）}
-  \addcontentsline{toc}{subsubsection}{ 第36条（役員の任期）}
+  \addcontentsline{toc}{subsubsection}{第36条（役員の任期）}
   \joumain{役員の任期については細則で定める。}
   
   \subsubsection*{第36条の２（役員の欠格条項）}
-  \addcontentsline{toc}{subsubsection}{ 第36条の２（役員の欠格条項）}
+  \addcontentsline{toc}{subsubsection}{第36条の２（役員の欠格条項）}
   \joumain{次の各号のいずれかに該当する者は、役員となることができない。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}破産者で復権を得ない者
@@ -698,13 +695,13 @@
   \end{itemize}
 
   \subsubsection*{第37条（役員の誠実義務等）}
-  \addcontentsline{toc}{subsubsection}{ 第37条（役員の誠実義務等）}
+  \addcontentsline{toc}{subsubsection}{第37条（役員の誠実義務等）}
   \joumain{役員は、法令、規約ならびに基本使用規則及び使用細則のほか、総会及び理事会の決議に従い、組合員のため、
   誠実にその職務を遂行するものとする。}
   \kou{２}{役員は、役員としての活動に応ずる必要経費の支払いと報酬をうけることができる。}
 
   \subsubsection*{第37条の２（利益相反取引の防止）}
-  \addcontentsline{toc}{subsubsection}{ 第37条の２（利益相反取引の防止）}
+  \addcontentsline{toc}{subsubsection}{第37条の２（利益相反取引の防止）}
   \joumain{役員は、次に掲げる場合には、理事会において、当該取引につき重要な事実を開示し、その承認を受けなければならない。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}役員が自己又は第三者のために管理組合と取引をしようとするとき。
@@ -712,7 +709,7 @@
   \end{itemize}
 
   \subsubsection*{第38条（理事長）}
-  \addcontentsline{toc}{subsubsection}{ 第38条（理事長）}
+  \addcontentsline{toc}{subsubsection}{第38条（理事長）}
   \joumain{理事長は、管理組合を代表し、その業務を統括するほか、次の各号に掲げる業務を遂行する。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}規約、基本使用規則および各細則ならびに総会若しくは理事会の決議により、理事長の職務として定められた事項。
@@ -726,11 +723,11 @@
   監事又は理事長以外の理事が管理組合を代表する。}
 
   \subsubsection*{第39条（副理事長）}
-  \addcontentsline{toc}{subsubsection}{ 第39条（副理事長）}
+  \addcontentsline{toc}{subsubsection}{第39条（副理事長）}
   \joumain{副理事長は、理事長を補佐し、理事長に事故があるときは、その職務を代理し、理事長が欠けたときは、その職務を行う。}
 
   \subsubsection*{第40条（理事）}
-  \addcontentsline{toc}{subsubsection}{ 第40条（理事）}
+  \addcontentsline{toc}{subsubsection}{第40条（理事）}
   \joumain{理事は、理事会を構成し、理事会の定めるところに従い、管理組合の業務を担当する。}
   \kou{２}{理事は、管理組合に著しい損害を及ぼすおそれのある事実があることを発見したときは、直ちに、当該事実を
   監事に報告しなければならない。}
@@ -738,7 +735,7 @@
   \kou{４}{全体利用施設協議会担当理事は、他の管理組合役員と協力し、全体利用施設協議会運営規則に則り業務を行う。}
 
   \subsubsection*{第41条（監事）}
-  \addcontentsline{toc}{subsubsection}{ 第41条（監事）}
+  \addcontentsline{toc}{subsubsection}{第41条（監事）}
   \joumain{監事は、管理組合の業務の執行及び財産の状況を監査し、その結果を総会に報告しなければならない。}
   \kou{３}{監事は、いつでも、理事及び第38条第１項第二号に規定する職員に対して業務の報告を求め、又は業務及び
   財産の状況の調査をすることができる。}
@@ -757,7 +754,7 @@
   \end{center}
 
   \subsubsection*{第42条（総会）}
-  \addcontentsline{toc}{subsubsection}{ 第42条（総会）}
+  \addcontentsline{toc}{subsubsection}{第42条（総会）}
   \joumain{管理組合の総会は、総組合員で組織する。}
   \kou{２}{総会は、通常総会及び臨時総会とし、区分所有法に定める集会とする。}
   \kou{３}{理事長は、通常総会を、毎年1回新会計年度開始以後2ケ月以内に招集しなければならない。}
@@ -765,7 +762,7 @@
   \kou{５}{総会の議長は、理事長が務める。}
   
   \subsubsection*{第43条（招集手続）}
-  \addcontentsline{toc}{subsubsection}{ 第43条（招集手続）}
+  \addcontentsline{toc}{subsubsection}{第43条（招集手続）}
   \joumain{総会を招集するには、少なくとも会議を開く日の２週間前（会議の目的がマンション再生等に係る決議であるときは２か月前）までに、
   会議の日時、場所（WEB会議システム等を用いて会議を開催するときは、その開催方法）、目的及び議案の要領を示して、
   組合員に通知を発しなければならない。}
@@ -794,7 +791,7 @@
   理事会の承認を得て、１週間を下回らない範囲において、第１項の期間を短縮することができる。}
 
   \subsubsection*{第44条（組合員の総会招集権）}
-  \addcontentsline{toc}{subsubsection}{ 第44条（組合員の総会招集権）}
+  \addcontentsline{toc}{subsubsection}{第44条（組合員の総会招集権）}
   \joumain{組合員が組合員総数及び第46条第１項に定める議決権総数の各５分の１以上に当たる組合員の同意を得て、会議の目的を示して総会の招集を
   請求した場合には、理事長は、２週間以内にその請求があった日から４週間以内の日（会議の目的がマンション再生等に係る決議であるときは、
   ２か月と２週間以内の日）を会日とする臨時総会の招集の通知を発しなければならない。}
@@ -803,20 +800,20 @@
   組合員（書面又は代理人によって議決権を行使する者を含む。）の議決権の過半数をもって、組合員の中から選任する。}
 
   \subsubsection*{第45条（出席資格）}
-  \addcontentsline{toc}{subsubsection}{ 第45条（出席資格）}
+  \addcontentsline{toc}{subsubsection}{第45条（出席資格）}
   \joumain{組合員のほか、理事会が必要と認めた者は、総会に出席することができる。}
   \kou{２}{区分所有者の承諾を得て専有部分を占有する者は、会議の目的につき利害関係を有する場合には、
   総会に出席して意見を述べることができる。この場合において、総会に出席して意見を述べようとする者は、
   あらかじめ理事長にその旨を通知しなければならない。}
 
   \subsubsection*{第46条（議決権）}
-  \addcontentsline{toc}{subsubsection}{ 第46条（議決権）}
+  \addcontentsline{toc}{subsubsection}{第46条（議決権）}
   \joumain{各組合員は、その所有する住戸1戸につき各1個の議決権を有する。}
   \kou{２}{住戸1戸が数人の共有に属する場合、その議決権行使については、これら共有者をあわせて一の組合員とみなす。}
   \kou{３}{前項により一の組合員とみなされる者は、議決権を行使する者1名を選任し、その者の氏名を
   あらかじめ総会開会までに理事長に届け出なければならない。}
   \kou{４}{議決権は、書面（議決行使権等）又は代理人によって行使することができる。
-  ただし第68条第2項に規定する暴力団の構成員又は準構成員は、代理人となる資格を有しない。}
+  ただし第73条第2項に規定する暴力団の構成員又は準構成員は、代理人となる資格を有しない。}
   \kou{５}{組合員が代理人により議決権を行使しようとする場合において、その代理人は、以下の各号に掲げる者でなければならない。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}その組合員の配偶者(婚姻の届出をしていないが事実上婚姻関係と同様の事情にある者を含む。)又は二親等の成年親族
@@ -829,7 +826,7 @@
   その資格を有することを証する書面の写しを理事長に提出しなければならない。}
 
   \subsubsection*{第47条（総会の会議及び議事）}
-  \addcontentsline{toc}{subsubsection}{ 第47条（総会の会議及び議事）}
+  \addcontentsline{toc}{subsubsection}{第47条（総会の会議及び議事）}
   \joumain{総会の会議（WEB会議システム等を用いて開催する会議を含む。）は、前条第１項に定める議決権総数の過半数を有する
   組合員が出席しなければならない。}
   \kou{２}{総会の議事は、出席組合員の議決権の過半数で決する。}
@@ -874,7 +871,7 @@
   \kou{12}{総会においては、第43条第１項によりあらかじめ通知した事項についてのみ、決議することができる。}
 
   \subsubsection*{第48条（議決事項）}
-  \addcontentsline{toc}{subsubsection}{ 第48条（議決事項）}
+  \addcontentsline{toc}{subsubsection}{第48条（議決事項）}
   \joumain{次の各号に掲げる事項については、総会の決議を経なければならない。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}規約及び使用細則等の制定、変更又は廃止
@@ -900,7 +897,7 @@
   \end{itemize}
 
   \subsubsection*{第49条（議事録の作成、保管等）}
-  \addcontentsline{toc}{subsubsection}{ 第49条（議事録の作成、保管等）}
+  \addcontentsline{toc}{subsubsection}{第49条（議事録の作成、保管等）}
   \joumain{総会の議事については、議長は、書面又は電磁的記録により、議事録を作成しなければならない。}
   \kou{２}{議事録には、議事の経過の要領及びその結果を記載し、又は記録しなければならない。}
   \kou{３}{前項の場合において、議事録が書面で作成されているときは、議長及び議長の指名する2名の総会に
@@ -917,14 +914,14 @@
   \kou{６}{理事長は、所定の掲示場所に、議事録の保管場所を掲示しなければならない。}
 
   \subsubsection*{第49条の2（総会資料の保管等）}
-  \addcontentsline{toc}{subsubsection}{ 第49条の2（総会資料の保管等）}
+  \addcontentsline{toc}{subsubsection}{第49条の2（総会資料の保管等）}
   \joumain{理事長は、議案書及び付随する資料を書面又は電磁的記録により保管し、組合員又は利害関係人の理由を付した書面
   又は電磁的方法による請求があったときは、議案書及び付随する資料の閲覧をさせなければならない。
   この場合において、閲覧につき、相当の日時、場所等を指定することができる。}
   \kou{２}{電磁的記録により作成された議案書及び付随する資料の閲覧については、前条第５項に定める議事録の閲覧及び提供に関する規定を準用する。}
 
   \subsubsection*{第50条（書面による決議）}
-  \addcontentsline{toc}{subsubsection}{ 第50条（書面による決議）}
+  \addcontentsline{toc}{subsubsection}{第50条（書面による決議）}
   \joumain{規約により総会において決議をすべき場合において、組合員全員の承諾があるときは、書面による決議をする
   ことができる。}
   \kou{２}{規約により総会において決議すべきものとされた事項については、組合員全員の書面による合意があったときは、
@@ -939,18 +936,18 @@
   \end{center}
 
   \subsubsection*{第51条（理事会）}
-  \addcontentsline{toc}{subsubsection}{ 第51条（理事会）}
+  \addcontentsline{toc}{subsubsection}{第51条（理事会）}
   \joumain{理事会は、理事をもって構成する。}
-  \kou{２}{理事会の議長は、理事長が務める。}
-  \kou{３}{理事会は、次に掲げる職務を行う。}
+  \kou{２}{理事会は、次に掲げる職務を行う。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}規約若しくは使用細則等又は総会の決議により理事会の権限として定められた管理組合の業務執行の決定
     \item \toKansuji{2}理事の職務の執行の監督
     \item \toKansuji{3}理事長、副理事長及び会計担当理事の選任及び解任
   \end{itemize}
+  \kou{３}{理事会の議長は、理事長が務める。}
 
   \subsubsection*{第52条（招集）}
-  \addcontentsline{toc}{subsubsection}{ 第52条（招集）}
+  \addcontentsline{toc}{subsubsection}{第52条（招集）}
   \joumain{理事会は理事長が招集する。}
   \kou{２}{理事が半数以上の理事の同意を得て理事会の招集を請求した場合には、理事長は速やかに理事会を
   招集しなければならない。}
@@ -961,17 +958,17 @@
   全員の同意」と読み替えるものとする。ただし、理事会において別段の定めをすることができる。}
 
   \subsubsection*{第53条（理事会の会議及び議事）}
-  \addcontentsline{toc}{subsubsection}{ 第53条（理事会の会議及び議事）}
+  \addcontentsline{toc}{subsubsection}{第53条（理事会の会議及び議事）}
   \joumain{理事会の会議(WEB 会議システム等を用いて開催する会議を含む。) は、理事の半数以上が出席しなければ開くことができず、
   その議事は出席理事の過半数で決する。}
-  \kou{２}{次条第1項第5号に掲げる事項については、理事の過半数の承諾があるときは、書面又は電磁的方法による決議によることができる。}
+  \kou{２}{次条第1項第五号に掲げる事項については、理事の過半数の承諾があるときは、書面又は電磁的方法による決議によることができる。}
   \kou{３}{前2項の決議について特別の利害関係を有する理事は、議決に加わることができない。}
   \kou{４}{議事録については、第49条（第６項を除く。）の規定を準用する。ただし、第49条第３項及び第４項中「総会に出席した組合員」
   とあるのは「理事会に出席した理事」と読み替えるものとする。}
   \kou{５}{理事会で使用した資料については、第49条の２の規定を準用する。}
 
   \subsubsection*{第54条（議決事項）}
-  \addcontentsline{toc}{subsubsection}{ 第54条（議決事項）}
+  \addcontentsline{toc}{subsubsection}{第54条（議決事項）}
   \joumain{理事会は、この規約に別に定めるもののほか、次の各号に掲げる事項を決議する。}
   \begin{itemize}[label={}, leftmargin=3em, itemindent=-2em]
     \item \toKansuji{1}収支決算案、事業報告案、収支予算案及び事業計画案
@@ -995,7 +992,7 @@
   充てるための資金の借入れ及び修繕積立金の取崩しについて決議することができる。}
 
   \subsubsection*{第55条（専門委員会の設置）}
-  \addcontentsline{toc}{subsubsection}{ 第55条（専門委員会の設置）}
+  \addcontentsline{toc}{subsubsection}{第55条（専門委員会の設置）}
   \joumain{理事会は、その責任と権限の範囲内において、専門委員会を設置し、特定の課題を調査又は検討させることができる。}
   \kou{２}{専門委員会は、調査又は検討した結果を理事会に具申する。}
   
@@ -1005,16 +1002,16 @@
   \end{center}
 
   \subsubsection*{第56条（会計年度）}
-  \addcontentsline{toc}{subsubsection}{ 第56条（会計年度）}
+  \addcontentsline{toc}{subsubsection}{第56条（会計年度）}
   \joumain{管理組合の会計年度は、毎年1月1日から12月31日までとする。}
 
   \subsubsection*{第57条（管理組合の収入及び支出）}
-  \addcontentsline{toc}{subsubsection}{ 第57条（管理組合の収入及び支出）}
+  \addcontentsline{toc}{subsubsection}{第57条（管理組合の収入及び支出）}
   \joumain{管理組合の会計における収入は、第25条に定める管理費等及び第29条に定める使用料によるものとし、その支出は
   第27条から第29条に定めるところにより諸費用に充当する。}
 
   \subsubsection*{第58条（収支予算の作成及び変更）}
-  \addcontentsline{toc}{subsubsection}{ 第58条（収支予算の作成及び変更）}
+  \addcontentsline{toc}{subsubsection}{第58条（収支予算の作成及び変更）}
   \joumain{理事長は、毎会計年度の収支予算案を通常総会に提出し、その承認を得なければならない。}
   \kou{２}{収支予算を変更しようとするときは、理事長は、その案を臨時総会に提出し、その承認を得なければならない。}
   \kou{３}{理事長は、第56条に定める会計年度の開始後、第1項に定める承認を得るまでの間に、以下の各号に
@@ -1027,15 +1024,15 @@
   \end{itemize}
   \kou{４}{前項の規定に基づき行った支出は、第1項の規定により収支予算案の承認を得たときは、当該収支予算案による
   支出とみなす。}
-  \kou{５}{理事会が第54条第1項第15号の決議をした場合には、理事長は、同条第2項の決議に基づき、その支出を行うことができる。}
+  \kou{５}{理事会が第54条第1項第十五号の決議をした場合には、理事長は、同条第2項の決議に基づき、その支出を行うことができる。}
   \kou{６}{理事長は、第21条第6項の規定に基づき、敷地及び共用部分等の保存行為を行う場合には、そのために必要な支出を行うことができる。}
 
   \subsubsection*{第59条（会計報告）}
-  \addcontentsline{toc}{subsubsection}{ 第59条（会計報告）}
+  \addcontentsline{toc}{subsubsection}{第59条（会計報告）}
   \joumain{理事長は、毎会計年度の収支決算案を監事の会計監査を経て、通常総会に報告し、その承認を得なければならない。}
 
   \subsubsection*{第60条（管理費等の徴収）}
-  \addcontentsline{toc}{subsubsection}{ 第60条（管理費等の徴収）}
+  \addcontentsline{toc}{subsubsection}{第60条（管理費等の徴収）}
   \joumain{管理組合は、第25条に定める管理費等及び第29条に定める使用料について、組合員が各自開設する預金口座から
   自動振替の方法により第62条に定める口座に受け入れることとし、当月分は別に定める徴収日までに一括して 徴収する。
   ただし、臨時に要する費用として特別に徴収する場合には、別に定めるところによる。}
@@ -1052,36 +1049,36 @@
   \kou{７}{組合員は、納付した管理費等及び使用料について、その返還請求又は分割請求をすることができない。}
 
   \subsubsection*{第61条（管理費等の過不足）}
-  \addcontentsline{toc}{subsubsection}{ 第61条（管理費等の過不足）}
+  \addcontentsline{toc}{subsubsection}{第61条（管理費等の過不足）}
   \joumain{収支決算の結果、管理費に余剰を生じた場合には、その余剰は翌年度における管理費に充当する。}
-  \kou{２}{管理費等に不足が生じた場合、管理組合は組合員に対して第25条第2項に定める負担割合に応じて、
+  \kou{２}{管理費等に不足が生じた場合、管理組合は組合員に対して第25条第2項に定める管理費等の負担割合に応じて、
   その都度必要な金額の負担を求めることができる。}
 
   \subsubsection*{第62条（預金口座の開設）}
-  \addcontentsline{toc}{subsubsection}{ 第62条（預金口座の開設）}
+  \addcontentsline{toc}{subsubsection}{第62条（預金口座の開設）}
   \joumain{管理組合は、会計業務を遂行するため、管理組合の預金口座を開設するものとする。}
   
   \subsubsection*{第63条（借入れ）}
-  \addcontentsline{toc}{subsubsection}{ 第63条（借入れ）}
+  \addcontentsline{toc}{subsubsection}{第63条（借入れ）}
   \joumain{管理組合は、第28条第1項に定める業務を行うため必要な範囲内において、借入れをすることができる。}
 
   \subsubsection*{第64条（帳票類の作成、保管）}
-  \addcontentsline{toc}{subsubsection}{ 第64条（帳票類の作成、保管）}
+  \addcontentsline{toc}{subsubsection}{第64条（帳票類の作成、保管）}
   \joumain{理事長は、会計帳簿、什器備品台帳、組合員名簿及びその他の帳票類を書面又は電磁的記録により作成して保管し、
   組合員又は利害関係人の理由を付した書面又は電磁的方法による請求があったときは、これらを閲覧させなければならない。
   この場合において、閲覧につき、相当の日時、場所等を指定することができる。}
-  \kou{２}{理事長は、第32条第3号の長期修繕計画書、同条第5号の設計図書及び同条第6号の修繕等の履歴情報を、
+  \kou{２}{理事長は、第32条第三号の長期修繕計画書、同条第五号の設計図書及び同条第六号の修繕等の履歴情報を、
   書面又は電磁的記録により保管し、 組合員又は利害関係人の理由を付した書面又は電磁的方法による請求があったときは、
   これらを閲覧させなければならない。この場合において、閲覧につき、相当の日時、場所等を指定することができる。}
-  \kou{３}{理事長は、第49条第5項(第53条第4項において準用される場合を含む。)、本条第1項及び第2項並びに
-  第73条第2項及び第4項の規定により閲覧の対象とされる管理組合の財務・管理に関する情報については、組合員又は利害関係人
-  の理由を付した書面又は電磁的方法による請求に基づき、当該請求をした者が求める情報を記入した書面を交付し、
-  又は当該書面に記載すべき事項を電磁的方法により提供することができる。この場合において、理事長は、交付の相手方に
-  その費用を負担させることができる。}
+  \kou{３}{理事長は、第49条第５項（第53条第４項において準用される場合を含む。）、第49条の２第１項（第53条第５項において準用される場合を
+  含む。）、本条第１項及び第２項並びに第72条第２項及び第４項の規定により閲覧の対象とされる管理組合の財務・管理に関する情報については、
+  組合員又は利害関係人の理由を付した書面又は電磁的方法による請求に基づき、当該請求をした者が求める情報を記入した書面を交付し、
+  又は当該書面に記載すべき事項を電磁的方法により提供することができる。この場合において、理事長は、交付の相手方にその費用を負担させることが
+  できる。}
   \kou{４}{電磁的記録により作成された書類等の閲覧については、第49条第5項に定める議事録の閲覧に関する規定を準用する。}
 
   \subsubsection*{第65条（消滅時の財産の清算）}
-  \addcontentsline{toc}{subsubsection}{ 第65条（消滅時の財産の清算）}
+  \addcontentsline{toc}{subsubsection}{第65条（消滅時の財産の清算）}
   \joumain{管理組合が消滅する場合、その残余財産については、第10条に定める各区分所有者の共用部分の共有持分割合に応じて各区分所有者に
   帰属するものとする。}
   
@@ -1091,13 +1088,13 @@
   \end{center}
 
   \subsubsection*{第66条（義務違反者に対する措置）}
-  \addcontentsline{toc}{subsubsection}{ 第66条（義務違反者に対する措置）}
+  \addcontentsline{toc}{subsubsection}{第66条（義務違反者に対する措置）}
   \joumain{区分所有者又は占有者が建物の保存に有害な行為その他建物の管理又は使用に関し区分所有者の共同の利益に
   反する行為をした場合又はその行為をするおそれがある場合には、区分所有法第57条から第60条までの規定に
   基づき必要な措置をとることができる。}
 
   \subsubsection*{第67条（理事長の勧告及び指示等）}
-  \addcontentsline{toc}{subsubsection}{ 第67条（理事長の勧告及び指示等）}
+  \addcontentsline{toc}{subsubsection}{第67条（理事長の勧告及び指示等）}
   \joumain{区分所有者若しくはその同居人又は専有部分の貸与を受けた者若しくはその同居人（以下「区分所有者等」という。）
   が、法令、規約ならびに基本使用規則及び使用細則等に違反したとき、又は対象物件内における共同生活の秩序を
   乱す行為を行ったときは、理事長は、理事会の決議を経てその区分所有者等に対し、その是正等のため必要な
@@ -1115,7 +1112,7 @@
   通知しなければならない。この場合において、第43条第２項及び第３項の規定は、区分所有者への通知について準用する。}
 
   \subsubsection*{第67条の２（区分所有者の所在等の探索）}
-  \addcontentsline{toc}{subsubsection}{ 第67条の２（区分所有者の所在等の探索）}
+  \addcontentsline{toc}{subsubsection}{第67条の２（区分所有者の所在等の探索）}
   \joumain{区分所有者が第31条の規定に違反し必要な届出を行わないことにより、敷地及び共用部分等の管理に支障を及ぼし、
   又は及ぼすおそれがある場合には、理事長は、理事会の決議を経て、区分所有者の所在等を探索することができる。}
   \kou{２}{前項の場合において、理事長は、探索に要した費用について、違約金としての弁護士費用等を加算して、
@@ -1172,28 +1169,28 @@
   とあるのは「管理不全専有部分管理人」と、「所有者不明専有部分」とあるのは「管理不全専有部分」と読み替えるものとする。}
 
   \subsubsection*{第68条（合意管轄裁判所）}
-  \addcontentsline{toc}{subsubsection}{ 第68条（合意管轄裁判所）}
+  \addcontentsline{toc}{subsubsection}{第68条（合意管轄裁判所）}
   \joumain{この規約に関する管理組合と組合員間の訴訟については、対象物件所在地を管轄する横浜地方裁判所川崎支部を
   もって、第一審管轄裁判所とする。}
-  \kou{２}{第48条第（10）号に関する訴訟についても、前項と同様とする。}
+  \kou{２}{第48条第十一号に関する訴訟についても、前項と同様とする。}
 
   \subsubsection*{第69条（市及び近隣住民との協定の遵守）}
-  \addcontentsline{toc}{subsubsection}{ 第69条（市及び近隣住民との協定の遵守）}
+  \addcontentsline{toc}{subsubsection}{第69条（市及び近隣住民との協定の遵守）}
   \joumain{区分所有者は、管理組合が川崎市又は近隣住民と締結した協定について、これを誠実に遵守しなければならない。}
 
   \subsubsection*{第70条（細則）}
-  \addcontentsline{toc}{subsubsection}{ 第70条（細則）}
+  \addcontentsline{toc}{subsubsection}{第70条（細則）}
   \joumain{総会及び理事会の運営、会計処理、管理組合への届出事項等については、別に細則を定めることができる。}
 
   \subsubsection*{第71条（規約外事項）}
-  \addcontentsline{toc}{subsubsection}{ 第71条（規約外事項）}
+  \addcontentsline{toc}{subsubsection}{第71条（規約外事項）}
   \joumain{この規約ならびに基本使用規則及び使用細則等に定めのない事項については、区分所有法その他の法令の定める
   ところによる。}
   \kou{２}{この規約ならびに基本使用規則及び使用細則または法令のいずれにも定めのない事項については
   総会の決議による。}
 
   \subsubsection*{第72条（規約原本等）}
-  \addcontentsline{toc}{subsubsection}{ 第72条（規約原本等）}
+  \addcontentsline{toc}{subsubsection}{第72条（規約原本等）}
   \joumain{この規約を証するため、区分所有者全員が書面に記名又は電磁的記録に電子署名した規約を1通作成し、これを規約原本とする。}
   \kou{２}{規約原本は、理事長が保管し、区分所有者又は利害関係人の書面又は電磁的方法による請求があったときは、
   規約原本の閲覧をさせなければならない。}
@@ -1209,7 +1206,7 @@
   \kou{７}{電磁的記録により作成された規約原本等及び使用細則等の閲覧については、第49条第5項に定める議事録の閲覧に関する規定を準用する。}
 
   \subsubsection*{第73条（暴力団、不良入居者等の排除責任）}
-  \addcontentsline{toc}{subsubsection}{ 第73条（暴力団、不良入居者等の排除責任）}
+  \addcontentsline{toc}{subsubsection}{第73条（暴力団、不良入居者等の排除責任）}
   \joumain{区分所有者は、共同生活環境が侵害される恐れがある者または暴力団もしくはその構成員にその専有部を譲渡
   または貸与してはならない。}
   \kou{２}{本マンションに居住する区分所有者は、自ら暴力団（「暴力団員による不当な行為の防止等に関する
@@ -1232,11 +1229,11 @@
   \end{center}
 
   \subsubsection*{第1条（規約の発効）}
-  \addcontentsline{toc}{subsubsection}{ 第1条（規約の発効）}
+  \addcontentsline{toc}{subsubsection}{第1条（規約の発効）}
   \joumain{この規約は、令和4年4月1日から効力を発する。}
 
   \subsubsection*{第2条（容認事項）}
-  \addcontentsline{toc}{subsubsection}{ 第2条（容認事項）}
+  \addcontentsline{toc}{subsubsection}{第2条（容認事項）}
   区分所有者は、対象物件購入にあたり、下記事項を容認するものとし、また、専有部分を譲渡または貸与する
   場合においては、当該第三者に対し、これを承継させるものとする。
 
